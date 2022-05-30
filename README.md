@@ -15,7 +15,7 @@ where $x_t$ is word embedding at time $t$, $h_t$ is the hidden state at time $t$
 $$r_t = \sigma(W_{ir}x_t+b_{ir}+W_{hr}h_{t-1}+b_{hr})$$
 $$z_t = \sigma(W_{iz}x_t+b_{iz}+W_{hz}h_{t-1}+b_{hz})$$
 $$n_t = \tanh(W_{in}x_t+b_{in}+r_t*(W_{hn}h_{t-1}+b_{hn}))$$
-$$h_t=(1-z_t)*n_t + z_t*h_{t-1}$$
+$$h_t=(1-z_t) * n_t + z_t * h_{t-1}$$
 
 where $x_t$ is word embedding at time $t$, $h_t$ is the hidden state at time $t$, and $r_t$, $z_t$, $n_t$ are the reset, update and new gates respectively.
 
